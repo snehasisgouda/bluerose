@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    font-family: 'poppins';
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    transition: 0.2s ease-in-out 0.01s;
+}
+h3{
+    font-family: 'Sansita Swashed';
+    font-size: 1.6em;
+}
+
+button{
+    background-color: white;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px ;
+    color: rgb(63, 63, 63);
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(255, 115, 0);
+    color: white;
+}
+.nbar li{
+    list-style: none;
+}
+
+.nav-container{
+    background-color: black;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) ;
+    overflow: auto;
+}
+.nav-container a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.nav-container a:active,
+.nav-container a:hover{
+    background-color: turquoise;
+    color: black;
+    transform: scale(2);
+}
+.logo{
+    position: relative;
+    width: 250px;
+    padding: 25px 20px;
+    height: 90px;
+    font-size: 24px;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+.logo a{
+    font-family: 'Lobster', cursive;
+
+}
+.navigation{
+
+    float: right;
+}
+.nbar{
+    max-width: 1200px;
+    display: flex;
+    margin-top: 10px;
+
+}
+.items{
+    margin: 20px 10px;
+}
+
+
+@media(max-width : 1200px){
+    .toggle{
+        background-color: red;
+        height: 40px;
+        width: 40px;
+        /* box-sizing: border-box; */
+        float: right;
+        margin: 25px 40px 0px 0px;
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .toggle:hover,.toggle:active{
+        background-color: teal;
+        
+    }
+    
+    .navigation{
+        display: none;
+    }
+    .toggle::before{
+        content: '>';
+    }
+    .toggle.active::before{
+        content: '<';
+    }
+    .navigation.active{
+        display: block;
+        width: 100%;
+    }
+    .navigation.active ul{
+        display: block;
+        float: right;
+    }
+}
+
+body{
+    background: #0a2a43;
+    min-height: 1500px;
+}
+
+.intro-sec{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-sec::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 1000 ;
+}
+.intro-sec::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background : #0a2a43 ;
+    z-index: 1000 ;
+    mix-blend-mode: color;
+}
+
+.intro-sec img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#text{
+    position: relative;
+    color: #fff;
+    font-size: 3em;
+    z-index: 1;
+    font-family: 'Lobster', cursive;
+}
+#road{
+    z-index: 2;
+}
+.about{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    margin-top: 30px;
+    max-width: 1199px;
+
+}
+.about .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .left img{
+    width: 49vw;
+    /* height: 50vh; */
+}
+.about .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5em;
+    flex-direction: column;
+}
+
+
+@media(max-width:1199px){
+    .about{
+        grid-template-columns: 100vw;
+    }
+}
+
+.book{
+    max-width: 1198px;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    margin-top: 30px;
+    max-width: 1198px;
+    
+}
+.book .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book .right img{
+    width: 49vw;
+
+    /* height: 50vh; */
+}
+.book .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5em;
+    flex-direction: column;
+}
+.book .hide-seek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5em;
+    flex-direction: column;
+    display: none;
+}
+
+@media(max-width:1198px){
+
+    .book{
+        grid-template-columns: 100vw;
+    }
+    .book .left{
+        display: none;
+    }
+    .book .hide-seek{
+        display: flex;
+    }
+}
+.contact{
+    max-width: 1197px;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    margin-top: 30px;
+    max-width: 1198px;
+    
+}
+
+.contact .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .left img{
+    width: 49vw;
+    /* height: 50vh; */
+}
+.contact .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5em;
+    flex-direction: column;
+}
+
+@media(max-width:1197px){
+
+    .contact{
+        grid-template-columns: 100vw;
+    }
+}
+
+#last{
+    /* max-width: 1201px; */
+    height: 50vh;
+    background-color: gray;
+    overflow: hidden;
+}
+.links{
+    width: 100%;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.links li{
+    padding: 30px 30px;
+    list-style: none;
+
+}
+.links li a{
+    padding: 10px;
+    text-decoration: none;
+}
+.links li a:hover{
+    border: 2px solid orange;
+}
+.cc{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.cc a{
+    color: orange;
+    text-decoration: none;
+}
+
+.cc a:hover{
+    color: cyan;
+}
+@media(max-width:1201px){
+    .links li{
+        padding: 10px 10px;
+    }
+    .links li a{
+        font-size: 0.8rem;
+    }
+    .cc p{
+        font-size: 0.7rem;
+    }
+}

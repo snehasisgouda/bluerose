@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="nav-container">
+    <div class="toggle"></div>
+    <div class="logo"><a href="#">preety praveen</a></div>
+    <nav class="navigation">
+      <ul class="nbar">
+        <li class="items" id="item-1"><a href="#">HOME</a></li> 
+        <li class="items" id="item-2"><a href="#about">ABOUT</a></li>
+        <li class="items" id="item-3"><a href="#book">ABOUT THE BOOK</a></li>
+        <li class="items" id="item-4"><a href="#">GALLERY</a></li>
+        <li class="items" id="item-4"><a href="#contact">CONTACT</a></li>
+        <li class="items" id="item-4"><a href="#">VIDEOS</a></li>
+        <li class="items" id="item-4"><a href="#last">links</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="intro-sec">
+    <img src="images/bg.jpg" id="bg" alt="background">
+    <img src="images/moon.png" id="moon" alt="moon">
+    <img src="images/mountain.png" id="mountain" alt="mountain">
+    <img src="images/road.png" id="road" alt="road">
+    <h2 id="text">To have beautiful memories,
+      Live a beautiful today...</h2>
+  </section>
+  
+  <section class="about" id="about">
+    <div class="left">
+      <img src="images/computer-isometric-by-Vexels.png" alt="image">
+    </div>
+    <div class="right">
+      <h3>About me</h3>
+      <p>I’m a psychologist by profession and had a passion for writing since childhood. I’ve written
+        poems and stories and even tried my hand at writing and directing a couple of theatre plays
+        and short movies.
+        I strongly believe that to be happy, we’ve to make our surroundings happy. And following my
+        heart, I’ve always tried to be a helping hand for the needy through social work.
+      
+        </p>
+        <button>Find Out More</button>
+    </div>
+  </section>
+  <section class="book" id="book">
+    <div class="left">
+      <h3>The Book</h3>
+      <p>To accomplish the dreams of her parents, Simar, a girl from Punjab, lands up in Tamilnadu to complete her degree in dentistry. But fate had written a different story for her. Struggling to survive in a new world, she meets the love of her life, Naveen, a boy from Kerala.
+        </p>
+      <button>DISCOVER</button>
+    </div>
+    <div class="right">
+      <img src="images/book-page-manual-flat-by-Vexels.png" alt="image">      
+    </div>
+    <div class="hide-seek">
+      <h3>The Book</h3>
+      <p>To accomplish the dreams of her parents, Simar, a girl from Punjab, lands up in Tamilnadu to complete her degree in dentistry. But fate had written a different story for her. Struggling to survive in a new world, she meets the love of her life, Naveen, a boy from Kerala.
+        </p>
+      <button>DISCOVER</button>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="left">
+      <img src="images/cellphone-isometric-by-Vexels.png" alt="image">
+    </div>
+    <div class="right">
+      <h3>Contact Us</h3>
+      <p>Want to get in touch?
+        </p>
+        <button>CLICK HERE</button>
+    </div>
+  </section>
+
+  <footer id="last">
+    <ul class="links" id="link">
+      <li><a href="https://twitter.com/preetypraveen" target="_blank">TWITTER</a></li>
+      <li><a href="https://www.facebook.com/authorpreetypraveen" target="_blank">FACEBOOK</a></li>
+      <li><a href="https://www.instagram.com/preety_praveen/" target="_blank">INSTAGRAM</a></li>
+      <li><a href="https://www.youtube.com/channel/UCHCxs0kalQt5QAJsXOSbM8w" target="_blank">YOUTUBE</a></li>
+    </ul>
+    <div class="cc">
+      <p>© Preety Praveen. All rights reserved. 2020 Managed by <a href="https://www.preetypraveen.com/vivek@weconsult.co.in" target="_blank">WEconsult</a></p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $('.toggle').click(function(){
+        $('.toggle').toggleClass('active');
+        $('.navigation').toggleClass('active');
+      })
+    })
+  </script>
+  <script>
+    let bg = document.getElementById("bg");
+    let moon= document.getElementById("moon");
+    let mountain= document.getElementById("mountain");
+    let road= document.getElementById("road");
+    let text= document.getElementById("text");
+    window.addEventListener('scroll', function(){
+      var value = window.scrollY;
+      bg.style.top = value * 0.5 +'px';
+      moon.style.left = -value * 0.5 +'px';
+      mountain.style.top = -value * 0.15 +'px';
+      road.style.top = value * 0.15 +'px';
+      text.style.top = value * 0.7 +'px';
+
+    })
+
+  </script>
+</body>
+</html>
